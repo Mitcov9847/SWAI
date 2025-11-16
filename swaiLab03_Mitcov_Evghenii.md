@@ -96,8 +96,6 @@ sudo systemctl status zabbix-agent
 http://localhost/zabbix 
 ![photo_5247232477368094042_y](https://github.com/user-attachments/assets/920a1669-125d-44be-a737-e8821a6d5b58)
 
-![photo_5247232477368094042_y (1)](https://github.com/user-attachments/assets/3553e22c-006a-44a4-9b8f-cbea7381a0a1)
-
 ### 4. Добавление хоста в веб-интерфейсе Zabbix
 В интерфейсе Zabbix переходим в `Configuration → Hosts → Create host` и добавляем контролируемую машину.  
 
