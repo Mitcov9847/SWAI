@@ -29,7 +29,7 @@
 ### 1. Установка и настройка сервера Zabbix
 Для начала работы требуется подготовить виртуальную машину с Ubuntu 22.04. После обновления системы выполняем установку Zabbix:  
 
-```bash
+```
 wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
 sudo dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
 sudo apt update
@@ -50,7 +50,7 @@ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabb
 ### 2. Настройка базы данных и веб-интерфейса
 Создаем базу данных для Zabbix и пользователя:  
 
-```bash
+```
 sudo mysql -uroot -p
 CREATE DATABASE zabbix character set utf8mb4 collate utf8mb4_bin;
 CREATE USER 'zabbix'@'localhost' IDENTIFIED BY 'zabbix_password';
@@ -74,7 +74,7 @@ zcat /usr/share/doc/zabbix-sql-scripts/mysql/create.sql.gz | mysql -uzabbix -pza
 ### 3. Установка Zabbix Agent на другой машине
 На контролируемой машине устанавливаем Zabbix Agent:  
 
-```bash
+```
 sudo apt install zabbix-agent -y
 sudo systemctl enable zabbix-agent
 sudo systemctl start zabbix-agent
