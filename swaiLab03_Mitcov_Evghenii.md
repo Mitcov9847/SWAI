@@ -108,15 +108,6 @@ sudo systemctl status zabbix-agent
 http://localhost/zabbix 
 ![photo_5247232477368094042_y](https://github.com/user-attachments/assets/920a1669-125d-44be-a737-e8821a6d5b58)
 
-
-Проверяем, что в Dashboard отображается график CPU, памяти и сети.
-
-> **Пояснение:**  
-> - Items — это отдельные метрики (CPU, RAM, Disk, Network), которые собирает Zabbix.  
-> - Graphs визуализируют данные.  
-
-<img width="884" height="354" alt="{C034CF14-28D1-488F-BBE2-DA4930DDC47E}" src="https://github.com/user-attachments/assets/b0458742-6566-4600-a1db-ae3b4be9f78c" />
-
 ---
 
 ### 6. Настройка оповещения (триггер + действие)
