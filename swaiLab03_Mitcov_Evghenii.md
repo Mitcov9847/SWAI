@@ -41,8 +41,9 @@ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabb
 > - Frontend (веб-интерфейс) позволяет визуализировать метрики.  
 > - Apache/Nginx используется для отображения веб-интерфейса.  
 > - MySQL хранит все метрики и конфигурации.
-
-**Место для скриншота 1:** установка Zabbix сервера  
+<img width="812" height="483" alt="{C02113D1-426B-44E4-BB9D-34B857AD93DF}" src="https://github.com/user-attachments/assets/4343347a-c245-47d6-b76c-1c415d882e4f" />
+<img width="829" height="102" alt="{D0D4F3BF-8D21-4E68-AADA-1345DE0D3A16}" src="https://github.com/user-attachments/assets/ca75f862-5f39-4bfa-adf0-0af07b7bfa24" />
+<img width="708" height="215" alt="{E75051F1-601F-4C13-93B5-1A51CBDF60DD}" src="https://github.com/user-attachments/assets/cfa9e90d-b8f3-4640-9c14-574a336c6fca" />
 
 ---
 
@@ -57,19 +58,16 @@ GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
+<img width="831" height="586" alt="{F46168AD-DD4A-4219-87D0-CA52E98DF002}" src="https://github.com/user-attachments/assets/51dcf3db-36be-49ab-88db-3d2052aa25d0" />
 
 Импортируем схему базы данных:
 
 ```bash
 zcat /usr/share/doc/zabbix-sql-scripts/mysql/create.sql.gz | mysql -uzabbix -pzabbix_password zabbix
 ```
+<img width="810" height="37" alt="{0111167C-A1D1-49A5-B7A6-651FBE072CD9}" src="https://github.com/user-attachments/assets/7a1e5dbc-946e-459e-9641-b110c1acb102" />
 
 Настраиваем конфигурацию Zabbix сервера (`/etc/zabbix/zabbix_server.conf`), указывая логин и пароль к базе данных.
-
-> **Пояснение:**  
-> Database (MySQL) хранит все данные о метриках, триггерах и пользователях.  
-
-**Место для скриншота 2:** веб-интерфейс Zabbix при первом запуске  
 
 ---
 
@@ -82,12 +80,13 @@ sudo systemctl enable zabbix-agent
 sudo systemctl start zabbix-agent
 sudo systemctl status zabbix-agent
 ```
+<img width="738" height="358" alt="{1CB94D9E-E54E-4FD1-A469-B09E9C1B8524}" src="https://github.com/user-attachments/assets/fa333af9-b964-4160-8a2d-f990e07d461d" />
 
 > **Пояснение:**  
 > Zabbix Agent собирает метрики с сервера или рабочего места и отправляет их на Zabbix Server.  
-> Связь может быть активной (Agent отправляет данные серверу) или пассивной (сервер опрашивает агент).  
-
-**Место для скриншота 3:** статус Zabbix Agent  
+> Связь может быть активной (Agent отправляет данные серверу) или пассивной (сервер опрашивает агент).
+> 
+<img width="817" height="378" alt="{5D1A10B8-0EAE-4FCA-9021-15EA9179878D}" src="https://github.com/user-attachments/assets/37beba04-a125-45cc-8d8b-685fac847b25" />
 
 ---
 
@@ -99,20 +98,15 @@ sudo systemctl status zabbix-agent
 - Interfaces: IP 127.0.0.1, порт 10050  
 - Templates: `Linux by Zabbix agent`  
 
-> **Пояснение:**  
-> Host — это объект мониторинга. Templates позволяют быстро добавить набор Items (метрик) и Triggers (триггеров).  
-
-**Место для скриншота 4:** добавление хоста  
-
 ---
 
-### 5. Проверка сбора данных (CPU, RAM, сеть)
-Создаем нагрузку на процессор для проверки метрик:
+### Первоначальная настройка Zabbix через веб-интерфейс
 
-```bash
-sudo apt install stress
-stress --cpu 1 --timeout 60
-```
+В браузере стал доступен установочный мастер по адресу:
+
+http://localhost/zabbix 
+![photo_5247232477368094042_y](https://github.com/user-attachments/assets/920a1669-125d-44be-a737-e8821a6d5b58)
+
 
 Проверяем, что в Dashboard отображается график CPU, памяти и сети.
 
@@ -120,7 +114,7 @@ stress --cpu 1 --timeout 60
 > - Items — это отдельные метрики (CPU, RAM, Disk, Network), которые собирает Zabbix.  
 > - Graphs визуализируют данные.  
 
-**Место для скриншота 5:** график CPU под нагрузкой  
+<img width="884" height="354" alt="{C034CF14-28D1-488F-BBE2-DA4930DDC47E}" src="https://github.com/user-attachments/assets/b0458742-6566-4600-a1db-ae3b4be9f78c" />
 
 ---
 
