@@ -99,6 +99,7 @@ sudo systemctl status zabbix-agent
 - Templates: `Linux by Zabbix agent`  
 
 ---
+<img width="1033" height="647" alt="{9D63943B-A747-4B6A-8EE0-21B1B87D15B6}" src="https://github.com/user-attachments/assets/f0ebb0ac-8c25-4b73-8093-d8374b0dc084" />
 
 ### Первоначальная настройка Zabbix через веб-интерфейс
 
@@ -128,7 +129,7 @@ http://localhost/zabbix
 > Triggers позволяют Zabbix уведомлять администратора при критических событиях.  
 > Action log фиксирует все срабатывания триггеров.  
 
-**Место для скриншота 6:** триггер High CPU usage  
+<img width="863" height="728" alt="{8EB2FD21-9D7E-4C04-90C1-266F2F651017}" src="https://github.com/user-attachments/assets/0867a65b-9f19-44df-9222-032534dc7af9" />
 
 ---
 
@@ -138,7 +139,8 @@ http://localhost/zabbix
 - Настраиваем обновление каждые 10 секунд  
 - Можно визуально отслеживать состояние хоста  
 
-**Место для скриншота 7:** Dashboard с графиками  
+<img width="936" height="404" alt="{DE6DF35C-E8F5-4AE4-84F7-501F47DBD5BE}" src="https://github.com/user-attachments/assets/164efdea-086b-4f1f-9a82-f89643fdf253" />
+<img width="592" height="331" alt="{B9455510-1D84-4B2E-9AB5-EEBE3888A450}" src="https://github.com/user-attachments/assets/732f873f-30ff-444d-b6a6-38b94210a1c3" />
 
 ---
 
@@ -165,6 +167,4 @@ http://localhost/zabbix
 
 ## Заключение
 В ходе лабораторной работы я установил и настроил сервер Zabbix и агент на другой машине, добавил хост, настроил сбор метрик, создал триггер и визуализировал данные в Dashboard. Работа показала, как Zabbix позволяет мониторить состояние ИТ-инфраструктуры в реальном времени и своевременно реагировать на критические события.
-
-**Места для скриншотов оставлены для добавления иллюстраций установки, настройки и графиков.**
 
