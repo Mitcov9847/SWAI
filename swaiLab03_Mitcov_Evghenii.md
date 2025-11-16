@@ -91,6 +91,12 @@ sudo systemctl status zabbix-agent
 <img width="817" height="378" alt="{5D1A10B8-0EAE-4FCA-9021-15EA9179878D}" src="https://github.com/user-attachments/assets/37beba04-a125-45cc-8d8b-685fac847b25" />
 
 ---
+### Первоначальная настройка Zabbix через веб-интерфейс
+В браузере стал доступен установочный мастер по адресу:
+http://localhost/zabbix 
+![photo_5247232477368094042_y](https://github.com/user-attachments/assets/920a1669-125d-44be-a737-e8821a6d5b58)
+
+![photo_5247232477368094042_y (1)](https://github.com/user-attachments/assets/3553e22c-006a-44a4-9b8f-cbea7381a0a1)
 
 ### 4. Добавление хоста в веб-интерфейсе Zabbix
 В интерфейсе Zabbix переходим в `Configuration → Hosts → Create host` и добавляем контролируемую машину.  
@@ -102,13 +108,6 @@ sudo systemctl status zabbix-agent
 
 ---
 <img width="1033" height="647" alt="{9D63943B-A747-4B6A-8EE0-21B1B87D15B6}" src="https://github.com/user-attachments/assets/f0ebb0ac-8c25-4b73-8093-d8374b0dc084" />
-
-### Первоначальная настройка Zabbix через веб-интерфейс
-В браузере стал доступен установочный мастер по адресу:
-http://localhost/zabbix 
-![photo_5247232477368094042_y](https://github.com/user-attachments/assets/920a1669-125d-44be-a737-e8821a6d5b58)
-
-![photo_5247232477368094042_y (1)](https://github.com/user-attachments/assets/3553e22c-006a-44a4-9b8f-cbea7381a0a1)
 
 ---
 
